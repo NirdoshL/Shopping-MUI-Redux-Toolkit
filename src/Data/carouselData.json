@@ -1,0 +1,24 @@
+{
+    "carouselData":[
+        {
+        "title":"Shopping",
+        "img":"https://cdn.pixabay.com/photo/2017/12/26/09/15/woman-3040029_960_720.jpg",
+        "desc":"abcd"
+    },
+    {
+        "title":"Rid from Offline Stores",
+        "img":"https://cdn.pixabay.com/photo/2019/05/05/18/58/girl-4181395_960_720.jpg",
+        "desc":"efgh"
+    },
+    {
+        "title":"Variety of Items at One Place",
+        "img":"https://cdn.pixabay.com/photo/2016/11/29/05/07/breads-1867459_960_720.jpg",
+        "desc":"bhsdk"
+    },
+    {
+        "title":"Online Payment",
+        "img":"https://cdn.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603_960_720.jpg",
+        "desc":"credit crunch"
+    }
+]
+}
