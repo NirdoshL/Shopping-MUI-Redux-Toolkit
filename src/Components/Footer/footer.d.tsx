@@ -25,7 +25,7 @@ export  function Footer() {
   return (
     <>
     <Box 
-    height={"50vh"} width={"100%"} 
+    height={"100%"} width={"100%"} 
     bgcolor={"purple"} color="white"
     display={"flex"} flexDirection={"row"}
     justifyContent={"space-between"}
