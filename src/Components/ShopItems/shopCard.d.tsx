@@ -7,7 +7,9 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import {MdAddShoppingCart} from "react-icons/md"
+import {MdAddShoppingCart} from "react-icons/md";
+import { useAppDispatch } from '../../App/hooks.d';
+import { addToCart } from '../../App/Features/cartSlice.d';
 
 
 type props={
@@ -20,10 +22,22 @@ type props={
     img:string,
     price:string,
     type:string,
-    subType:string
+    subType:string,
+    item:object
 }
 
-export default function ShoppingCard({name,address,date,title,desc,forWhom,img,price,type,subType}:props) {
+export default function ShoppingCard({
+  item,
+  name,
+  date,
+  title,
+  desc,
+  img,
+  price,
+ }:props) {
+
+const dispatch=useAppDispatch();
+
   return (
     <Card sx={{ width: '250px' ,margin:"5px"}}>
       <CardMedia
@@ -54,7 +68,7 @@ export default function ShoppingCard({name,address,date,title,desc,forWhom,img,p
         </Box>
       </CardContent>
       <CardActions sx={{justifyContent:"space-between"}}>
-        <IconButton size="small"><MdAddShoppingCart/></IconButton>
+        <IconButton size="small" onClick={()=>dispatch(addToCart(item))}><MdAddShoppingCart/></IconButton>
         <Button size="small" color='inherit'>Buy Now</Button>
       </CardActions>
     </Card>

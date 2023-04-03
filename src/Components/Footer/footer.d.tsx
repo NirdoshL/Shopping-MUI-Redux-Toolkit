@@ -34,13 +34,13 @@ export  function Footer() {
       <Typography fontSize={"0.9rem"}><u>Customer Care</u></Typography>
     {  
       CustomerCare.map((item,index)=>(
-        <ButtonView item={item} path={CustomerCarePath} index={index}/>
+        <ButtonView key={index} item={item} path={CustomerCarePath} index={index}/>
       ))
     }
       <Typography fontSize={"0.9rem"} sx={{marginTop:"20%"}}><u>Earn with Sabai Ko Shopping</u></Typography>
       {  
       Earn.map((item,index)=>(
-        <ButtonView item={item} path={EarnPath} index={index}/>
+        <ButtonView key={index} item={item} path={EarnPath} index={index}/>
       ))
     }
     </Box>
@@ -49,7 +49,7 @@ export  function Footer() {
       <Typography fontSize={"0.9rem"}><u>Sabai Ko Shopping</u></Typography>
       {  
       AboutSabai.map((item,index)=>(
-        <ButtonView item={item} path={AboutSabaiPath} index={index}/>
+        <ButtonView key={index} item={item} path={AboutSabaiPath} index={index}/>
       ))
     }
     </Box>

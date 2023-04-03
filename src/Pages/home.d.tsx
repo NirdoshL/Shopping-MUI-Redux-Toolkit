@@ -1,4 +1,8 @@
-import {AppbarView, CarouselView, Catagories, Footer, ShopView} from "../Components/index.d"
+import {AppbarView,
+   CarouselView,
+   Catagories, 
+   Footer, 
+   ShopView} from "../Components/index.d"
 
 
 

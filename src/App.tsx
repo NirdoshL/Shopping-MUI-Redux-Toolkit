@@ -4,6 +4,7 @@ import Home from "./Pages/home.d";
 import ErrorScreen from "./Pages/noPath.d";
 import About from "./Pages/about.d";
 import Contact from "./Pages/contact.d";
+import {CartView} from "./Components/index.d";
 
 
 
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Home/>}/> 
             <Route path="/about" element={<About/>}/> 
             <Route path="/contact" element={<Contact/>}/> 
+            <Route path="/cart" element={<CartView/>}/> 
             <Route path="*" element={<ErrorScreen/>}/> 
          </Routes>
       </Router>

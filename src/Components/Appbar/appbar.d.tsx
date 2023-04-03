@@ -11,9 +11,12 @@ from '@mui/material'
 import {BsCartCheck} from "react-icons/bs"
 import {FiSettings} from "react-icons/fi"
 import { SidebarView } from '../Sidebar/sidebar.d'
+import { useAppSelector } from '../../App/hooks.d'
+import { Link } from 'react-router-dom'
 
 
 export  function AppbarView() {
+    const count=useAppSelector((state)=>state.cart.cartItems.length)
   return (
     <Box sx={{flexGrow:1}}>
         <AppBar 
@@ -25,8 +28,9 @@ export  function AppbarView() {
                 <Typography sx={{flexGrow:1}}>
                 Sabai Ko Shopping
                 </Typography>
-                <IconButton color='inherit' sx={{marginLeft:"5px"}}>
+                <IconButton component={Link} to="/cart" color='inherit' sx={{marginLeft:"5px"}}>
                     <BsCartCheck/>
+                    <sup style={{color:'red',fontSize:"0.9rem"}}>{count}</sup>
                 </IconButton>
                 <IconButton color='inherit'sx={{marginLeft:"5px"}}>
                     <FiSettings/>

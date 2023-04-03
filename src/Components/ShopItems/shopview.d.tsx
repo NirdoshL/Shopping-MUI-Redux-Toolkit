@@ -12,6 +12,7 @@ export  function ShopView() {
         {
             data.data.map((item,index)=>(
                 <ShoppingCard 
+                item={item}
                 key={index}
                 name={item.name}
                 address={item.address}
