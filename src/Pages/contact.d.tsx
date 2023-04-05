@@ -12,7 +12,6 @@ import data from "../Data/contact.json"
 export default function Contact() {
   return (
     <Box 
-    position={"fixed"} 
     height={"100vh"} width={"100%"} 
     justifyContent={"center"}>
       <Typography 

@@ -12,7 +12,8 @@ import { useAppDispatch } from '../../App/hooks.d';
 import { addToCart } from '../../App/Features/cartSlice.d';
 
 
-type props={
+type props=
+{
     name:string,
     address:string,
     date:string,
@@ -24,7 +25,8 @@ type props={
     type:string,
     subType:string,
     item:object
-}
+  }
+
 
 export default function ShoppingCard({
   item,

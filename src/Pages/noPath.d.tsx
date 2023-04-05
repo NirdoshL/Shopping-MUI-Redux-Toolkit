@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 
 export default function ErrorScreen() {
   return (
-    <Box position={"fixed"} height={"100vh"} width={"100%"}>
+    <Box height={"100vh"} width={"100%"}>
     <Button
     component={Link}
     to="/" >Go Back</Button>

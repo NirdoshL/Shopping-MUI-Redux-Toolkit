@@ -8,8 +8,7 @@ import {AppbarView,
 
 export default function Home() {
   return (
-    <div>
-        <AppbarView/>
+    <div> 
         <CarouselView/>
         <Catagories/>
         <ShopView/>

@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import {Link} from 'react-router-dom'
 
 type props={
     title:string,
@@ -31,7 +32,7 @@ export default function CardView({title,desc,img}:props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" color="inherit">View</Button>
+        <Button component={Link} to={"/"+title} size="small" color="inherit">View</Button>
       </CardActions>
     </Card>
   );

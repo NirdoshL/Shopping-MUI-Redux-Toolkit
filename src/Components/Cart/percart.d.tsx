@@ -1,11 +1,20 @@
 import React from 'react'
 import {Box, Typography,Card,CardContent,CardActions,CardMedia,Button} from '@mui/material'
+import { useAppDispatch } from '../../App/hooks.d'
+import { addToCart, removeCartItems } from '../../App/Features/cartSlice.d'
+import {obj} from "../../App/Features/cartSlice.d"
+
+
 
 type Props = {
-    items:object[],
+    items:obj[],
+    total:number
 }
 
-export default function PerCart({items}: Props) {
+export default function PerCart({items,total}: Props) {
+
+
+const dispatch=useAppDispatch();
   return (
     <>
   {
@@ -50,20 +59,20 @@ export default function PerCart({items}: Props) {
                 by {item.name}
               </Typography>
               <Typography gutterBottom variant="body2" component="div">
-                on {item.date}
+                No: {item.numberOfItems}
               </Typography>
               </Box>
             </CardContent>
             <CardActions sx={{justifyContent:"space-between"}}>
-              <Button size="small" color='inherit'>Remove</Button>
-              <Button size="small" color='inherit'>Add more</Button>
+              <Button size="small" color='inherit' onClick={()=>{dispatch(removeCartItems(item))}}>Remove</Button>
+              <Button size="small" color='inherit' onClick={()=>{dispatch(addToCart(item))}} >Add more</Button>
             </CardActions>
           </Card>  
         ))
        }
     </Box>
     <Box display={"flex"} justifyContent={"space-between"} justifyItems={"center"} margin={"20px"}>
-    <Typography variant="h6" fontWeight={"bold"} color="red">Total Price: Rs 3000</Typography>
+    <Typography variant="h6" fontWeight={"bold"} color="red">Total Price: Rs{total}</Typography>
     <Button variant="contained">Buy All</Button>
     </Box>
     </>
