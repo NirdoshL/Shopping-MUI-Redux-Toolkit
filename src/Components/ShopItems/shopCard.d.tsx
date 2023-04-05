@@ -39,7 +39,7 @@ export default function ShoppingCard({
  }:props) {
 
 const dispatch=useAppDispatch();
-
+const [color,setColor]=React.useState("inherit");
   return (
     <Card sx={{ width: '250px' ,margin:"5px"}}>
       <CardMedia
@@ -70,7 +70,9 @@ const dispatch=useAppDispatch();
         </Box>
       </CardContent>
       <CardActions sx={{justifyContent:"space-between"}}>
-        <IconButton size="small" onClick={()=>dispatch(addToCart(item))}><MdAddShoppingCart/></IconButton>
+        <IconButton size="small" onClick={()=>dispatch(addToCart(item))}>
+          <MdAddShoppingCart color={color} onClick={()=>setColor("red")}/>
+        </IconButton>
         <Button size="small" color='inherit'>Buy Now</Button>
       </CardActions>
     </Card>

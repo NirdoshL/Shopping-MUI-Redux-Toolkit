@@ -31,7 +31,9 @@ const router=createBrowserRouter(
     <Route path="code" element={<FooterCode/>}/>
     <Route path="*" element={<ErrorScreen/>}/>
 
+    <Route path="/catagories">
     <Route path=":id"  element={<SpecificCatagory/>}/>
+    </Route>
     
     </Route>
     

@@ -15,7 +15,7 @@ type props={
     
 }
 
-export default function CardView({title,desc,img}:props) {
+export default function CardView({title,desc,type,img}:props) {
   return (
     <Card sx={{ maxWidth: '300px' ,margin:"5px"}}>
       <CardMedia
@@ -32,7 +32,7 @@ export default function CardView({title,desc,img}:props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button component={Link} to={"/"+title} size="small" color="inherit">View</Button>
+        <Button component={Link} to={"/catagories/"+type} size="small" color="inherit">View</Button>
       </CardActions>
     </Card>
   );
